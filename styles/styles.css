@@ -1,11 +1,18 @@
-.advantages {
-  background-image: url("images/main-index/index-bg.jpg");
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
 }
 
-.subscription-form {
-  background-image: url("images/main-index/subscription-bg.jpg");
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
 }
 
-.filter-list {
-  background-image: url("images/catalog/catalog-bg.jpg");
-}
+
+
