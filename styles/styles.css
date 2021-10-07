@@ -196,6 +196,145 @@ advantages-title {
   color: #000000;
 }
 
-.filter-list {
+.page-main .catalog-page-main {
   background-image: url("../images/bg/catalog-bg.jpg");
 }
+
+.page-main-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  color: #FFFFFF;
+}
+
+.breadcrumbs {
+  color: #FFFFFF;
+}
+
+.breadcrumbs-link {
+  color: inherit;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.control-item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.reset-button {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  background-color: transparent;
+}
+
+.hotels-list {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.sorting-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+}
+
+.select-control {
+  background-color: #FFFFFF;
+  color: #333333;
+  border: 2px solid #E6E6E6;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.filter-button {
+  background-color: #FFFFFF;
+  color: #000000;
+  text-decoration: none;
+  border: 2px solid #E6E6E6;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.hotel-card {
+  background-color: #FFFFFF;
+  text-align: left;
+}
+
+.hotel-card-link {
+  text-decoration: none;
+}
+
+.hotel-card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.hotel-card-type, .hotel-card-price {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+}
+
+.hotel-rating {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.hotel-card-button {
+  background-color: #756257;
+}
+
+.pressed-batton {
+  background-color: #7DB54F;
+}
+
+.pagination-link {
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  text-decoration: none;
+  font-style: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.pagination-current {
+  background-color: #E5E5E5;
+  color: #000000;
+}
+
+.hotel-quantity {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+}
+
+.select-hotel-quantity {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+  background-color: #FFFFFF;
+  border: 2px solid #E6E6E6;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.catalog-subscription-form {
+  background-color: #FFFFFF;
+}
+
