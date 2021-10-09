@@ -18,8 +18,8 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #83B3D3;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .button {
@@ -29,15 +29,10 @@ body {
   font-weight: 700;
   text-align: center;
   color: #FFFFFF;
-  background: #83B3D3;
+  background-color: #83B3D3;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 4px;
-}
-
-.page-header {
-  background-color: #FFFFFF;
-  color: #000000;
 }
 
 .navigation-link {
@@ -46,13 +41,10 @@ body {
   font-weight: 700;
   text-align: center;
   color: #000000;
-  background-color: #FFFFFF;
   text-decoration: none;
 }
 
 .page-main {
-  color: #FFFFFF;
-  background-color: #83B3D3;
   background-image: url("../images/bg/index-bg.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -62,8 +54,8 @@ body {
   text-align: center;
 }
 
-advantages-title {
-  font-weight: bold;
+.advantages-title {
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -78,32 +70,28 @@ advantages-title {
   background-color: #FFFFFF;
 }
 
-.advantages-item, .adviсes-item {
-  width: 400px;
-  height: 384px;
-}
-
-.advantages-item:nth-child(1-2) {
-  background-color: #83B3D3;
-  color: #FFFFFF;
-}
-
-.advantages-item:nth-child(3), .advantages-item:nth-child(5) {
+.advantages-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.12);
   color: #000000;
+}
+
+
+.advantages-item:nth-child(1), .advantages-item:nth-child(2) {
+  background-color: #83B3D3;
+  color: #FFFFFF;
 }
 
 .advantages-item:nth-child(4) {
   background-color: rgba(131, 179, 211, 0.2);
   color: #000000;
-}
+} /* Или нужно было, как с advises-item в названии класса описать содержание, а не порядок?*/
 
-.adviсes-item-1, .adviсes-item-3 {
+.adviсes-item-housing, .adviсes-item-gifts {
   background-color: rgba(131, 179, 211, 0.12);
   color: #000000;
 }
 
-.adviсes-item-2 {
+.adviсes-item-food {
   background-color: #FFFFFF;
   color: #000000;
 }
@@ -142,15 +130,11 @@ advantages-title {
 }
 
 .hotel-search-button {
-  width: 575px;
-  height: 60px;
   background-color: #756257;
   border-radius: 10px;
 }
 
 .subscription-form {
-  width: 1200px;
-  height: 411px;
   text-align: center;
   color: #FFFFFF;
   background-image: url("../images/bg/subscription-bg.jpg");
@@ -194,7 +178,6 @@ advantages-title {
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
 }
 
 .page-main .catalog-page-main {
@@ -208,12 +191,8 @@ advantages-title {
   color: #FFFFFF;
 }
 
-.breadcrumbs {
-  color: #FFFFFF;
-}
-
 .breadcrumbs-link {
-  color: inherit;
+  color: #FFFFFF;
 }
 
 .catalog-filter-title {
@@ -250,18 +229,12 @@ advantages-title {
 .select-control {
   background-color: #FFFFFF;
   color: #333333;
-  border: 2px solid #E6E6E6;
-  box-sizing: border-box;
-  border-radius: 4px;
 }
 
 .filter-button {
   background-color: #FFFFFF;
   color: #000000;
   text-decoration: none;
-  border: 2px solid #E6E6E6;
-  box-sizing: border-box;
-  border-radius: 4px;
 }
 
 .hotel-card {
@@ -330,9 +303,6 @@ advantages-title {
   line-height: 23px;
   color: #333333;
   background-color: #FFFFFF;
-  border: 2px solid #E6E6E6;
-  box-sizing: border-box;
-  border-radius: 4px;
 }
 
 .catalog-subscription-form {
