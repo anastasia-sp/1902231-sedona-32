@@ -14,12 +14,24 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   background-color: #FFFFFF;
   color: #000000;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .button {
@@ -33,6 +45,27 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 4px;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 420px;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.navigation-user {
+  max-width: 290px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -50,8 +83,17 @@ body {
   background-repeat: no-repeat;
 }
 
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .advantages {
   text-align: center;
+}
+
+.advantages-info {
+  background-color: #FFFFFF;
 }
 
 .advantages-title {
@@ -60,40 +102,54 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   color: #000000;
-  background-color: #FFFFFF;
 }
 
 .advantages-subtitle {
   font-weight: 400;
   font-size: 22px;
   color: #333333;
-  background-color: #FFFFFF;
 }
 
-.advantages-item:nth-child(odd) {
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.advantages-item {
+  width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
   color: #000000;
 }
 
+.advantages-item:nth-child(even) {
+  width: 400px;
+  background-color: rgba(131, 179, 211, 0.2);
+}
 
-.advantages-item:nth-child(1), .advantages-item:nth-child(2) {
+.advantages-item-large,
+.advantages-item-large:nth-child(even) {
+  width: 1200px;
   background-color: #83B3D3;
   color: #FFFFFF;
 }
 
-.advantages-item:nth-child(4) {
-  background-color: rgba(131, 179, 211, 0.2);
-  color: #000000;
-} /* Или нужно было, как с advises-item в названии класса описать содержание, а не порядок?*/
-
-.adviсes-item-housing, .adviсes-item-gifts {
-  background-color: rgba(131, 179, 211, 0.12);
-  color: #000000;
-}
-
-.adviсes-item-food {
+.adviсes-list {
   background-color: #FFFFFF;
   color: #000000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.advises-item {
+  width: 400px;
+}
+
+.advices-item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item-title, .adviсes-item-title {
@@ -173,11 +229,31 @@ body {
 .page-footer {
   background-color: #FFFFFF;
   color: #000000;
+}
+
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-social-list {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-contacts-phone{
+  width: 700px;
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
+  margin-left: 60px;
+}
+
+.about-text {
+  margin-left: auto;
 }
 
 .page-main .catalog-page-main {
