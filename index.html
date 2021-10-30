@@ -51,7 +51,8 @@
       <section class="advantages">
         <h1 class="visually-hidden">Город Седона</h1>
         <div class="img-wrapper">
-          <img src="images/welcome.png" width="458" height="352" alt="Welcome to the gorgeous Sedona. «Because the Grand Canyon sucks!»">
+          <img src="images/welcome.png" width="458" height="352"
+            alt="Welcome to the gorgeous Sedona. «Because the Grand Canyon sucks!»">
         </div>
         <div class="advantages-info">
           <p class="advantages-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
@@ -60,40 +61,56 @@
         <h2 class="visually-hidden">Преимущества:</h2>
         <ol class="advantages-list">
           <li class="advantages-item advantages-item-large">
-            <h3 class="advantages-item-title">Настоящий городок</h3>
-            <p class="advantages-item-content">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="images/real-city.jpg" width="800" height="384" alt="Городок Седона">
-            <ul class="adviсes-list">
-              <li class="adviсes-item advices-item-housing">
-                <h4 class="adviсes-item-title">Жильё</h4>
-                <p class="advices-item-content">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <div class="large-wrapper advantages-item-wrapper">
+              <h3 class="advantages-item-title">Настоящий городок</h3>
+              <p class="advantages-item-content">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <img class="advantages-item-img" src="images/real-city.jpg" width="800" height="384" alt="Городок Седона">
+            <ul class="advices-list">
+              <li class="advices-item advices-item-housing">
+                <div class="advises-item-wrapper">
+                  <h4 class="advices-item-title">Жильё</h4>
+                  <p class="advices-item-content">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                </div>
               </li>
               <li class="advices-item advices-item-food">
-                <h4 class="adviсes-item-title">Еда</h4>
-                <p class="advices-item-content">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+                <div class="advises-item-wrapper">
+                  <h4 class="advices-item-title">Еда</h4>
+                  <p class="advices-item-content">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+                </div>
               </li>
               <li class="advices-item advices-item-gifts">
-                <h4 class="adviсes-item-title">Сувениры</h4>
-                <p class="advices-item-content">Не только китайского, но и настоящего местного производства!</p>
+                <div class="advises-item-wrapper">
+                  <h4 class="advices-item-title">Сувениры</h4>
+                  <p class="advices-item-content">Не только китайского, но и настоящего местного производства!</p>
+                </div>
               </li>
             </ul>
           </li>
           <li class="advantages-item advantages-item-large">
-            <h3 class="advantages-item-title">Там есть мост дьявола</h3>
-            <p class="advantages-item-content">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img src="images/devil-bridge.jpg" width="800" height="384" alt="Мост дьявола">
+            <div class="large-wrapper advantages-item-wrapper">
+              <h3 class="advantages-item-title">Там есть мост дьявола</h3>
+              <p class="advantages-item-content">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </div>
+            <img class="advantages-item-img" src="images/devil-bridge.jpg" width="800" height="384" alt="Мост дьявола">
           </li>
           <li class="advantages-item">
-            <h3 class="advantages-item-title">Небольшая площадь</h3>
-            <p class="advantages-item-content">Все достопримечательности находятся очень близко</p>
+            <div class="advantages-item-wrapper">
+              <h3 class="advantages-item-title">Небольшая площадь</h3>
+              <p class="advantages-item-content">Все достопримечательности находятся очень близко</p>
+            </div>
           </li>
           <li class="advantages-item">
-            <h3 class="advantages-item-title">Красивая дорога</h3>
-            <p class="advantages-item-content">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <div class="advantages-item-wrapper">
+              <h3 class="advantages-item-title">Красивая дорога</h3>
+              <p class="advantages-item-content">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
           </li>
           <li class="advantages-item">
-            <h3 class="advantages-item-title">Мало туристов</h3>
-            <p class="advantages-item-content">Большинство едет в Гранд Каньон и толпится там</p>
+            <div class="advantages-item-wrapper">
+              <h3 class="advantages-item-title">Мало туристов</h3>
+              <p class="advantages-item-content">Большинство едет в Гранд Каньон и толпится там</p>
+            </div>
           </li>
         </ol>
       </section>
@@ -107,11 +124,11 @@
       </section>
 
       <section class="subscription-form">
-        <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p class="subscription-content">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
-          гостиниц
-          в Седоне</p>
-        <form action="#" method="post">
+        <div class="subscription-wrapper">
+          <h2 class="subscription-title">Подпишитесь на рассылку</h2>
+          <p class="subscription-content">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        </div>
+        <form class="subscription-field" action="#" method="post">
           <label for="form-email" class="visually-hidden">Почта</label>
           <input type="email" id="form-email" name="e-mail" placeholder="Ваш e-mail" class="subscription-box">
           <button type="submit" class="button subscription-button">Подписаться</button>
