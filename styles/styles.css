@@ -174,28 +174,22 @@ body {
   padding: 0;
 }
 
-.advantages-item-large:nth-child(2) {
-  display: flex;
-}
-
-.advantages-item-img:nth-child(2) {
-  order: -1;
-}
-
 .advantages-item-wrapper {
-  padding: 110px;
+  padding: 75px;
   padding-bottom: 80px;
   padding-top: 98px;
 }
 
 .large-wrapper {
-  grid-column: 1/2;
-  grid-row: 1/2;
+  grid-column: span 1;
 }
 
 .advantages-item-img {
   grid-column: span 2;
-  grid-row: 1/2;
+}
+
+.advantages-item-large:nth-child(even) .advantages-item-img {
+  order: -1;
 }
 
 .advantages-item-title {
@@ -225,7 +219,7 @@ body {
 
 .advices-item {
   width: 33.33%;
-  padding: 105px;
+  padding: 75px;
   padding-top: 184px;
   padding-bottom: 80px;
 }
@@ -412,7 +406,7 @@ body {
 
 .sorting-wrapper {
   display: grid;
-  grid-template-columns: 530px 290px 80px 50px 50px 50px;
+  grid-template-columns: 530px 370px 160px;
   margin-top: 50px;
   margin-bottom: 45px;
 }
@@ -423,6 +417,11 @@ body {
   line-height: 39px;
   text-transform: uppercase;
   margin: 0;
+}
+
+.filter-button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .select-control {
@@ -442,10 +441,11 @@ body {
   text-decoration: none;
   display: block;
   margin-right: 8px;
+  width: 48px;
 }
 
-.cards-wrapper {
-  display: grid;
+.filter-button:nth-child(3n+3) {
+  margin: 0;
 }
 
 .hotel-card {
@@ -456,8 +456,8 @@ body {
     30px
     50px
     40px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   column-gap: 8px;
 }
 
