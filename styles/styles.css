@@ -30,16 +30,16 @@ body {
   color: #000000;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .page-wrapper {
   background-color: #FFFFFF;
   width: 1200px;
   margin: 0 auto;
-}
-
-.page-wrapper,
-.page-wrapper::before,
-.page-wrapper::after {
-  box-sizing: border-box;
 }
 
 .visually-hidden {
@@ -164,7 +164,6 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-
 .advantages-item-large,
 .advantages-item-large:nth-child(even) {
   display: grid;
@@ -173,6 +172,14 @@ body {
   background-color: #83B3D3;
   color: #FFFFFF;
   padding: 0;
+}
+
+.advantages-item-large:nth-child(2) {
+  display: flex;
+}
+
+.advantages-item-img:nth-child(2) {
+  order: -1;
 }
 
 .advantages-item-wrapper {
@@ -187,7 +194,7 @@ body {
 }
 
 .advantages-item-img {
-  grid-column: 2/4;
+  grid-column: span 2;
   grid-row: 1/2;
 }
 
@@ -218,15 +225,13 @@ body {
 
 .advices-item {
   width: 33.33%;
+  padding: 105px;
+  padding-top: 184px;
+  padding-bottom: 80px;
 }
 
 .advices-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.12);
-}
-
-.advises-item-wrapper {
-  padding: 80px;
-  padding-top: 185px;
 }
 
 .advices-item-title {
@@ -280,19 +285,13 @@ body {
 
 .subscription-form {
   display: grid;
-  grid-template-columns: 128px 800px 128px;
-  padding: 94px 72px;
+  grid-template-columns: 150px 500px 150px;
+  padding: 94px 200px;
   text-align: center;
   color: #FFFFFF;
   background-image: url("../images/bg/subscription-bg.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-
-.subscription-wrapper {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  padding: 0 130px;
 }
 
 .subscription-title {
@@ -302,6 +301,8 @@ body {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 20px;
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
 
 .subscription-content {
@@ -311,11 +312,13 @@ body {
   text-transform: none;
   margin: 0;
   margin-bottom: 30px;
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 .subscription-field {
-  grid-column: 2/3;
-  grid-row: 2/3;
+  grid-column: 1/-1;
+  grid-row: 3/4;
 }
 
 .subscription-box {
@@ -325,12 +328,13 @@ body {
   color: #000;
   background-color: #F2F2F2;
   border-radius: 0px 10px 10px 0px;
-  min-height: 60px;
   min-width: 600px;
+  min-height: 60px;
 }
 
 .subscription-button {
   border-radius: 0px 10px 10px 0px;
+  min-width: 195px;
   min-height: 60px;
 }
 
@@ -408,7 +412,7 @@ body {
 
 .sorting-wrapper {
   display: grid;
-  grid-template-columns: 540px 370px 50px 50px 50px;
+  grid-template-columns: 530px 290px 80px 50px 50px 50px;
   margin-top: 50px;
   margin-bottom: 45px;
 }
@@ -447,13 +451,14 @@ body {
 .hotel-card {
   text-align: left;
   display: grid;
-  grid-template-columns: 230px 160px 520px 160px;
+  grid-template-columns: 217px 160px 520px 160px;
   grid-template-rows:
     30px
     50px
     40px;
   margin-top: 30px;
   margin-bottom: 30px;
+  column-gap: 8px;
 }
 
 .hotel-card-image {
@@ -462,12 +467,10 @@ body {
   margin-right: 37px;
   text-decoration: none;
   display: block;
-  margin-right: 37px;
 }
 
 .card-image {
 display: block;
-margin-right: 37px;
 }
 
 .hotel-card-title {
@@ -523,7 +526,6 @@ margin-right: 37px;
   grid-column: 2/3;
   grid-row: 3/4;
   background-color: #756257;
-  margin-right: 8px;
 }
 
 .favourites-button {
@@ -608,33 +610,13 @@ margin-right: 37px;
 
 .catalog-subscription-form  {
   text-align: center;
-  background-color: #FFFFFF;
-  display: grid;
-  grid-template-columns: 128px 800px 128px;
-  padding: 94px 72px;
-}
-
-.catalog-subscription-title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
   color: #000000;
-  margin: 0;
-  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  background-image: none;
+  padding: 200px;
+  padding-top: 90px;
+  padding-bottom: 138px;
 }
-
-.catalog-subscription-content {
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 26px;
-  text-align: center;
-  color: #333333;
-  margin: 0;
-  margin-bottom: 30px;
-}
-
 
 .page-footer {
   color: #000000;
