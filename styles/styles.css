@@ -74,19 +74,18 @@ body {
 }
 
 .button:focus {
-  box-shadow: inset 0 0 0 2px #756257;
+  box-shadow: 0 0 0 2px #756257;
   outline: none;
   background-color: #68a2ca;
 }
 
 .button:active {
   background-color: #68a2ca;
-  color: #f2f2f2;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .page-header {
   padding: 0 72px;
-  box-sizing: border-box;
 }
 
 .navigation {
@@ -174,9 +173,8 @@ body {
   fill: #756257;
 }
 
-.navigation-link.modal-button {
-  width: 160px;
-  height: 37px;
+.modal-button {
+  display: block;
   background-color: #756257;
   border-radius: 4px;
   border: none;
@@ -186,24 +184,30 @@ body {
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   color: #ffffff;
   padding: 10px 34px;
   margin: 14px 0;
+  margin-left: 10px;
 }
 
 .modal-button:hover {
   background-color: #615048;
-  color: #ffffff;
 }
 
 .modal-button:focus {
   background-color: #615048;
-  color: #ffffff;
+  box-shadow: 0 0 0 4px #68a2ca;
+  outline: none;
+}
+
+.modal-button:active {
+  background-color: #615048;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .page-main {
   flex-grow: 1;
-  box-sizing: border-box;
 }
 
 .img-wrapper {
@@ -301,7 +305,6 @@ body {
   counter-increment: number;
   content: "— №" counter(number) "—";
   display: block;
-  position: relative;
   margin-bottom: 20px;
 }
 
@@ -320,8 +323,29 @@ body {
 .advices-item {
   width: 33.33%;
   padding: 75px;
-  padding-top: 89px;
+  padding-top: 189px;
   padding-bottom: 80px;
+}
+
+.advices-item-housing {
+  background-image: url("../images/icons/house.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  background-size: 75px 72px;
+}
+
+.advices-item-food {
+  background-image: url("../images/icons/food.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  background-size: 75px 72px;
+}
+
+.advices-item-gifts {
+  background-image: url("../images/icons/gifts.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  background-size: 75px 72px;
 }
 
 .advices-item:nth-child(odd) {
@@ -391,6 +415,11 @@ body {
   background-color: #615048;
 }
 
+.hotel-search-button:active {
+  background-color: #615048;
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .subscription-form {
   display: grid;
   grid-template-columns: 150px 500px 150px;
@@ -435,9 +464,10 @@ body {
   line-height: 26px;
   color: #333333;
   background-color: #F2F2F2;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0 0 10px;
   min-width: 600px;
   min-height: 60px;
+  padding-left: 22px;
 }
 
 .subscription-box:hover {
@@ -446,15 +476,14 @@ body {
 
 .subscription-box:focus {
   background-color: #e5e5e5;
-  box-shadow: inset 0 0 0 4px #83B3D3;
-  border-radius: 10px 0 0 10px;
+  box-shadow: 0 0 0 4px #83B3D3;
   outline: none;
 }
 
-.subscription-box:active {
+.subscription-box:not(:placeholder-shown) {
   background-color: #ffffff;
-  color: #333333;
-  box-shadow: inset 0 0 0 4px #000000;
+  color: #000000;
+  box-shadow: 0 0 0 4px #000000;
   border-radius: 10px 0 0 10px;
   outline: none;
 }
