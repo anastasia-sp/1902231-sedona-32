@@ -509,7 +509,7 @@ body {
 }
 
 .subscription-button {
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0 10px 10px 0;
   min-width: 195px;
   min-height: 60px;
   padding: 0;
@@ -699,8 +699,8 @@ body {
   position: absolute;
   top: 7px;
   left: 5px;
-  width: 11px;
-  height: 11px;
+  width: 10px;
+  height: 10px;
   border-radius: 58%;
   background-color: #3F5E72;
   content: "";
@@ -709,26 +709,38 @@ body {
 .catalog-inputs-wrapper {
   position: relative;
   display: grid;
+  width: 297px;
   grid-template-columns: 1fr 2px 1fr;
 }
 
 .catalog-inputs-wrapper::after {
-  position: absolute;
-  top: 0;
-  left: 143px;
   content: "";
   background-color: #ffffff;
   width: 2px;
   height: 48px;
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
 
 .catalog-filter-label {
   display: flex;
-  position: relative;
+  color:rgba(255, 255, 255, 0.4);
+}
+
+.label-for {
+  position: absolute;
+  top: 12px;
+  right: 164px;
+}
+
+.label-to {
+  position: absolute;
+  top: 12px;
+  right: 14px;
 }
 
 .catalog-filter-input {
-  width: 143px;
+  width: 100%;
   padding-top: 12px;
   padding-left: 19px;
   padding-right: 50px;
@@ -743,27 +755,16 @@ body {
   appearance: textfield;
 }
 
-.label-for {
-  position: absolute;
-  top: 12px;
-  right: 45px;
-}
-
-.label-to {
-  position: absolute;
-  top: 12px;
-  left: 80px;
-}
-
 .input-from {
+  grid-column: 1/2;
+  grid-row: 1/2;
   border-radius: 4px 0 0 4px;
   border-right: none;
 }
 
 .input-to {
-  position: absolute;
-  top: 0;
-  left: -31px;
+  grid-column: 3/4;
+  grid-row: 1/2;
   border-radius: 0 4px 4px 0;
   border-left: none;
 }
@@ -797,6 +798,7 @@ body {
   height: 20px;
   background: #FFFFFF;
   border-radius: 5px;
+  border: none;
   cursor: pointer;
 }
 
@@ -807,7 +809,7 @@ body {
 
 .toggle-max {
   top: -8px;
-  left: 0px;
+  left: 0;
 }
 
 .apply-button {
@@ -1324,7 +1326,7 @@ display: block;
   fill: #e5e5e5;
 }
 
-.popover {
+.popover-favourites {
   position: absolute;
   top: 65px;
   left: -190px;
@@ -1332,13 +1334,22 @@ display: block;
   box-sizing: border-box;
   width: 400px;
   min-height: 158px;
-  padding: 25px;
   padding-bottom: 0;
   background-color: #FFFFFF;
-  border: 1px solid #E6E6E6;
-  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
-  border-radius: 20px 20px 0 0;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 20px 20px 20px 20px;
   display: none;
+}
+
+.popover-favourites::before {
+  position: absolute;
+  top: -8px;
+  left: 199px;
+  content: "";
+  background-image: url("../images/icons/popover-triangle.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 9px;
 }
 
 .popover-open {
@@ -1347,23 +1358,46 @@ display: block;
 
 .popover-content {
   height: 100%;
+  padding: 25px;
+  border: 1px solid #E6E6E6;
+  border-radius: 20px 20px 0 0;
 }
 
 .favourites-list {
   padding: 0;
   margin: 0;
   list-style-type: 0;
-  margin-bottom: 25px;
 }
 
 .favourites-item {
   display: grid;
-  grid-template-columns: 48px 240px 16px;
-  grid-template-rows:
-   21px
-   27px;
-  column-gap: 17px;
+  grid-template-columns: 288px 45px;
+}
+
+.favourites-item:not(:last-child) {
   margin-bottom: 25px;
+}
+
+.favourites-hotel {
+  display: grid;
+  grid-template-columns: 48px 240px;
+  grid-template-rows:
+    21px
+    27px;
+  column-gap: 17px;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.favourites-hotel:hover {
+  opacity: 0.4;
+}
+
+.favourites-hotel:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
 }
 
 .favourites-hotels-icon {
@@ -1393,24 +1427,34 @@ display: block;
 }
 
 .delete-button {
-  grid-column: 3/4;
+  padding: 0;
+  grid-column: 2/3;
   grid-row: 1/-1;
   border: none;
   background-color: #ffffff;
   cursor: pointer;
+  margin-left: 25px;
+  color: rgba(0, 0, 0, 0.2);
 }
 
-.delete-button-icon {
-  color: #E5E5E5;
+.delete-button:hover {
+  color: #000000;
+}
+
+.delete-button:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 5px;
+}
+
+.delete-button:active {
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .popover-favourites-button {
   display: block;
-  position: absolute;
-  top: 170px;
-  left: -1px;
   width: 400px;
   padding: 20px 100px;
+  margin: -1px 0 0 0;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -1422,6 +1466,19 @@ display: block;
   border-radius: 0 0 20px 20px;
   border: none;
   cursor: pointer;
+}
+
+.popover-favourites-button:hover {
+  background-color: #615048;
+}
+
+.popover-favourites-button:focus {
+  box-shadow: inset 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.popover-favourites-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .modal-container {
@@ -1441,23 +1498,33 @@ display: block;
   padding-top: 62px;
   background-color: #FFFFFF;
   width: 715px;
-  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
 }
 
 .modal-close-button {
   position: absolute;
   top: 54px;
-  right: 70px;
+  right: 69px;
   width: 53px;
   height: 53px;
   background-color: #F2F2F2;
   border: none;
-  border-radius: 58%;
-  background-image: url("../images/icons/close-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  border-radius: 50%;
   cursor: pointer;
+  color: #000000;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-title {
@@ -1472,12 +1539,20 @@ display: block;
 
 .search-form {
   display: grid;
-  grid-template-columns: 155px 190px 97px 133px;
+  grid-template-columns: 155px 133px 163px 133px;
   grid-row:
    1fr
    1fr
    1fr;
-  row-gap: 40px;
+}
+
+.modal-form-label {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 40px;
+  color: #000000;
+  padding: 5px 0;
 }
 
 .arrival-date-label {
@@ -1488,6 +1563,8 @@ display: block;
 .arrival-date-field {
   grid-column: 2/5;
   grid-row: 1/2;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .departure-date-label {
@@ -1498,6 +1575,8 @@ display: block;
 .departure-date-field {
   grid-column: 2/5;
   grid-row: 2/3;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .adults-quantity-label {
@@ -1515,6 +1594,7 @@ display: block;
   grid-column: 3/4;
   grid-row: 3/4;
   position: relative;
+  margin-left: 54px;
 }
 
 .children-quantity-field {
@@ -1522,21 +1602,14 @@ display: block;
   grid-row: 3/4;
 }
 
-.modal-form-label {
-  margin: 0;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 40px;
-  color: #000000
-}
-
 .field {
+  width: 100%;
   padding: 15px 20px;
   background-color: #F2F2F2;
   border: none;
   border-radius: 4px;
   height: 50px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -1544,48 +1617,138 @@ display: block;
   color: #000000;
 }
 
-.field[type="datetime"] {
-  background-image: url("../images/icons/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: right 18px top 50%;
+.field[type="text"]:hover {
+  background-color: #E6E6E6;
+}
+
+.field[type="text"]:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.field[type="text"]:focus:not(:placeholder-shown) {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 2px #000000;
+  outline: none;
+}
+
+.arrival-date-field-caption {
+  margin: 0;
+  padding: 0;
+  color: #FF5757;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.departure-date-field-caption {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.calendar-button {
+  position: absolute;
+  top: 20px;
+  right: 19px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: rgba(0, 0, 0, 0.4);
+  background-color: #F2F2F2;
+  cursor: pointer;
 }
 
 .field[type="number"] {
   appearance: textfield;
-  background-image: url("../images/icons/minus.svg"), url("../images/icons/plus.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: left 19px top 50%, right 19px top 50%;
   text-align: center;
+}
+
+.quantity-field {
+  position: relative;
+}
+
+.quantity {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #F2F2F2;
+}
+
+.quantity:hover {
+  color: #000000;
+}
+
+.quantity:focus {
+  color: #000000;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.quantity:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.quantity-minus {
+  top: 12px;
+  left: 19px;
+}
+
+.quantity-plus {
+  top: 18px;
+  right: 19px;
 }
 
 .info-button {
   width: 25px;
   height: 25px;
-  background-color: #83B3D3;
   border-radius: 58%;
+  background-image: url("../images/icons/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #83B3D3;
   border: none;
-  margin-left: 5px;
-  color: #ffffff;
   cursor: pointer;
+}
+
+.info-button:hover {
+  background-color: #68a2ca;
 }
 
 .popover-info {
   position: absolute;
   top: 60px;
   left: -60px;
-  z-index: 1;
   box-sizing: border-box;
   width: 256px;
   padding: 15px;
   background-color: #333333;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   display: none;
 }
 
+.popover-info::before {
+  position: absolute;
+  top: -9px;
+  left: 112px;
+  content: "";
+  background-image: url("../images/icons/popover-tr.svg");
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 9px;
+}
+
 .popover-info-content {
   margin: 0;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1595,5 +1758,7 @@ display: block;
 
 .modal-search-button {
   grid-column: 1/-1;
+  margin-top: 40px;
   padding: 15px 250px;
+  border-radius: 10px;
 }
