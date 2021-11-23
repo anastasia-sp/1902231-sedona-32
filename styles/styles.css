@@ -527,6 +527,7 @@ img {
 
 .subscription-box::placeholder {
   color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
 }
 
 .subscription-box:hover {
@@ -739,16 +740,16 @@ img {
 }
 
 .control-input[type="radio"] + .control-item::before {
-  border-radius: 58%;
+  border-radius: 50%;
 }
 
 .control-input[type="radio"]:checked + .control-item::after {
   position: absolute;
-  top: 7px;
-  left: -33px;
+  top: 8px;
+  left: -34px;
   width: 10px;
   height: 10px;
-  border-radius: 58%;
+  border-radius: 50%;
   background-color: #3f5e72;
   content: "";
 }
@@ -765,7 +766,6 @@ img {
   content: "";
   background-color: #ffffff;
   width: 2px;
-  height: 48px;
   grid-column: 2/3;
   grid-row: 1/2;
 }
@@ -904,8 +904,21 @@ img {
   background-color: transparent;
   color: #ffffff;
   border: none;
-  padding: 0 30px;
+  padding: 0 5px;
   cursor: pointer;
+  border-radius: 4px;
+}
+
+.reset-button:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.reset-button:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.reset-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hotels-list {
@@ -917,7 +930,7 @@ img {
   display: grid;
   grid-template-columns: 530px 370px 160px;
   margin-top: 44px;
-  margin-bottom: 42px;
+  margin-bottom: 44px;
 }
 
 .sorting-title {
@@ -1007,11 +1020,11 @@ img {
 .hotel-card {
   text-align: left;
   display: grid;
-  grid-template-columns: 210px 150px 160px 1fr 160px;
+  grid-template-columns: 210px 1fr 160px;
   grid-template-rows:
-    30px
-    50px
-    40px;
+    min-content
+    min-content
+    min-content;
   padding-top: 30px;
   padding-bottom: 30px;
   column-gap: 8px;
@@ -1049,11 +1062,11 @@ img {
 
 .hotel-card-title {
   color: #000000;
-  grid-column: 2/4;
+  grid-column: 2/3;
   grid-row: 1/2;
   font-weight: 700;
   font-size: 24px;
-  line-height: 31px;
+  line-height: 25px;
   text-decoration: none;
 }
 
@@ -1076,11 +1089,11 @@ img {
 }
 
 .hotel-info {
-  grid-column: 2/5;
+  grid-column: 2/3;
   grid-row: 2/3;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .hotel-card-type {
@@ -1091,7 +1104,7 @@ img {
   color: #333333;
   margin: 0;
   margin-right: 8px;
-  min-width: 151px;
+  min-width: 150px;
 }
 
 .hotel-card-price {
@@ -1106,7 +1119,7 @@ img {
 }
 
 .hotel-stars-mark {
-  grid-column: 5/6;
+  grid-column: 3/4;
   grid-row: 1/2;
   background-image: url("../images/icons/star.svg");
   background-repeat: space;
@@ -1138,28 +1151,28 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: #333333;
-  grid-column: 5/6;
+  grid-column: 3/4;
   grid-row: 3/4;
   background-color: #f2f2f2;
   border-radius: 4px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   min-height: 37px;
   margin: 0;
 }
 
 .card-buttons {
-  grid-column: 2/5;
+  grid-column: 2/3;
   grid-row: 3/4;
   display: flex;
   flex-wrap: wrap;
+  column-gap: 8px;
 }
 
 .hotel-card-button {
   background-color: #756257;
   text-align: center;
-  padding: 10px 15px;
-  width: 151px;
-  margin-right: 8px;
+  padding: 8px 15px;
+  width: 150px;
 }
 
 .hotel-card-button:hover {
@@ -1178,13 +1191,12 @@ img {
 }
 
 .favourites-button {
-  padding: 10px 15px;
+  padding: 8px 15px;
   width: 160px;
-  margin-right: 8px;
 }
 
 .favourites-button:hover {
-  box-shadow: 0 0 0 1px #756257;
+  outline: 1px solid #756257;
 }
 
 .favourites-button:active {
@@ -1211,7 +1223,7 @@ img {
 
 .pagination-download-more {
   display: block;
-  margin: 32px auto;
+  margin: 30px auto;
   padding: 14px 240px;
   font-weight: bold;
   font-size: 20px;
@@ -1308,7 +1320,7 @@ img {
   background-color: #ffffff;
   background-image: none;
   padding: 200px;
-  padding-top: 80px;
+  padding-top: 83px;
   padding-bottom: 138px;
 }
 
